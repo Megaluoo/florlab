@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - FlorLab Laboratorio Clínico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* --- ESTILOS (SON LOS MISMOS QUE index.html) --- */
+        @font-face {
+            font-family: 'Gabriola';
+            src: url('gabriola.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --primary-color: #d81b60;
+            --secondary-color: #00838f;
+            --text-color: #333;
+            --text-light: #555;
+            --background-color: #ffffff;
+            --light-gray-bg: #f8f9fa;
+            --white-color: #ffffff;
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+            --font-gabriola: 'Gabriola', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-secondary);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.7;
+        }
+
+        /* --- Header --- */
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: padding 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 0.5rem 5%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        nav .logo img { 
+            height: 50px; 
+            transition: height 0.3s ease; 
+        }
+        header.scrolled .logo img { 
+            height: 40px; 
+        }
+        
+        nav .logo span {
+            font-family: var(--font-gabriola);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-left: 10px;
+        }
+
+        nav ul { list-style: none; display: flex; align-items: center; }
+        nav ul li { margin-left: 2.5rem; }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-family: var(--font-primary);
+            transition: color 0.3s ease;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        nav ul li a:hover::after { width: 100%; }
+        nav ul li a:hover { color: var(--primary-color); }
+        
+        .nav-cta a {
+            background: var(--primary-color);
+            color: var(--white-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .nav-cta a:hover {
+            background: var(--secondary-color);
+            color: var(--white-color);
+            transform: scale(1.05);
+        }
+        .nav-cta a::after { display: none; } /* No underline for CTA */
+
+        /* --- General Section Styling --- */
+        .section { padding: 5rem 5%; text-align: center; }
+        .section.bg-light { background-color: var(--light-gray-bg); }
+        .section-title {
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-subtitle {
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        /* --- ESTILOS ESPECÍFICOS PARA LA PÁGINA NOSOTROS --- */
+        .about-section {
+            padding: 6rem 5% 4rem; /* Ajuste de padding superior para dejar espacio del header */
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .about-section h1 {
+            color: var(--primary-color);
+            font-family: var(--font-primary);
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .about-section h2 {
+            color: var(--secondary-color);
+            font-family: var(--font-primary);
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .about-section p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .about-section ul {
+            list-style: none; /* Cambiado de 'disc' a 'none' para usar íconos */
+            margin-left: 0; /* Quitado el margen izquierdo */
+            padding-left: 0; /* Quitado el padding izquierdo */
+            margin-bottom: 1.5rem;
+        }
+        .about-section li {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+            padding-left: 2rem; /* Espacio para el ícono */
+            position: relative;
+        }
+        /* Añadir ícono personalizado a los puntos de la lista */
+        .about-section li::before {
+            content: '✓'; /* Puedes cambiar el ícono aquí, ej: '\2713' */
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .team-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+             gap: 2rem;
+             margin-top: 2rem;
+             text-align: center;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid var(--secondary-color);
+        }
+        .team-member h4 {
+            font-family: var(--font-primary);
+            color: var(--text-color);
+            font-size: 1.2rem;
+        }
+        .team-member p {
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        /* --- Footer --- */
+        footer { background: #2c3e50; color: var(--white-color); padding: 4rem 5% 2rem; }
+        .footer-content { display: flex; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 2rem; }
+        .footer-section { flex: 1; min-width: 250px; }
+        footer h3 { font-family: var(--font-primary); color: var(--primary-color); margin-bottom: 1.5rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem; display: inline-block; }
+        .social-media a { display: inline-block; color: var(--white-color); text-decoration: none; margin-right: 1.5rem; font-size: 28px; transition: color 0.3s, transform 0.3s; }
+        .social-media a:hover { color: var(--primary-color); transform: translateY(-3px); }
+        .footer-bottom { text-align: center; border-top: 1px solid #466380; padding-top: 2rem; font-size: 0.9rem; }
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: 20px;
+        }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .admin-login-link { display: block; width: 10px; height: 10px; margin: 10px auto 0; opacity: 0; }
+
+        /* --- WhatsApp Float Button --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            h1 { font-size: 2.5rem !important; }
+            nav { flex-direction: column; }
+            nav ul { display: none; } /* Oculta menú en móvil, considerar menú hamburguesa si es necesario */
+            .about-section h1 { font-size: 2.5rem; }
+            .about-section h2 { font-size: 1.5rem; }
+            .footer-content { flex-direction: column; text-align: center; }
+            footer h3 { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"> <img src="logo.png" alt="FlorLab Logo">
+                <span>FlorLab</span>
+            </a>
+            <ul>
+                <li><a href="nosotros.html">Nosotros</a></li> 
+                
+                <li><a href="index.html#why-us">Beneficios</a></li> <li><a href="index.html#process">Proceso</a></li> <li><a href="index.html#tests">Pruebas</a></li> <li class="nav-cta"><a href="index.html#results">Consulta de Resultados</a></li> </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h1>Sobre FlorLab</h1>
+            
+            <p>
+                Bienvenido a FlorLab, tu laboratorio clínico de confianza en Maracay, Aragua. Desde nuestra fundación en [Año de Fundación, ej: 2008], nos hemos dedicado a ofrecer servicios de diagnóstico precisos y confiables, utilizando tecnología de punta y un equipo humano altamente calificado y comprometido con tu bienestar.
+            </p>
+            
+            <h2>Nuestra Misión</h2>
+            <p>
+                Proporcionar resultados de análisis clínicos con la máxima exactitud y en el menor tiempo posible, contribuyendo activamente al cuidado de la salud de nuestros pacientes y apoyando la labor diagnóstica de la comunidad médica. Creemos en una atención cercana, ética y personalizada.
+            </p>
+
+            <h2>Nuestra Visión</h2>
+            <p>
+                Ser el laboratorio clínico líder y de referencia en la región central de Venezuela, reconocidos por nuestra excelencia, innovación constante, calidad humana y compromiso con la salud integral de la comunidad.
+            </p>
+
+            <h2>Nuestros Valores</h2>
+            <ul>
+                <li><strong>Precisión:</strong> Rigor científico y tecnológico en cada análisis.</li>
+                <li><strong>Confianza:</strong> Transparencia y confidencialidad en el manejo de tu información.</li>
+                <li><strong>Calidad:</strong> Cumplimiento de los más altos estándares nacionales e internacionales.</li>
+                <li><strong>Innovación:</strong> Actualización constante en equipos y técnicas diagnósticas.</li>
+                <li><strong>Compromiso:</strong> Dedicación total al bienestar de nuestros pacientes.</li>
+                <li><strong>Ética:</strong> Actuamos siempre con integridad y profesionalismo.</li>
+            </ul>
+
+            <h2>Nuestro Equipo</h2>
+            <p>
+                Contamos con un equipo multidisciplinario de profesionales, incluyendo Licenciados en Bioanálisis, técnicos especializados y personal administrativo, todos dedicados a brindarte la mejor atención.
+            </p>
+            </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📍 Dirección: Centro Profesional "La Floresta", Calle Comercio Nº 1, Piso N° 3 - Local 3-09, Maracay Edo. Aragua.</p>
+                <p>📞 Teléfono (24 horas): 0243-2202217</p>
+                <p>📲 WhatsApp (7:00am - 6:00pm): 0424-3524393</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1565.485125916053!2d-67.5878374!3d10.2681506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e803b9c11df2391%3A0x3c968100beaf7af5!2sLaboratorio+Cl%C3%ADnico+FlorLab!5e0!3m2!1ses!2sve!4v1719889234857!5m2!1ses!2sve" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+             <div class="footer-section">
+                <h3>Horarios</h3>
+                <p>Lunes a Sábado: 7:00am - 6:00pm</p>
+                <p>Servicio de Emergencia 24h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/profile.php?id=61578221825313" target="_blank" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="https://www.instagram.com/florlab.lc/?hl=es" target="_blank" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 FlorLab. Todos los derechos reservados.</p>
+             <a href="login_page.php" class="admin-login-link" aria-label="Admin Login"></a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/584243524393" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.45L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.289.173-1.413z"/></svg>
+    </a>
+
+    <script>
+        // Script simple para el efecto del header al hacer scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
