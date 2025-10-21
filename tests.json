@@ -1,0 +1,1908 @@
+[
+    {
+        "name": "Hematología Completa",
+        "keywords": [
+            "hematologia",
+            "completa",
+            "sangre",
+            "conteo",
+            "cbc",
+            "hema"
+        ],
+        "price_usd": "10.00"
+    },
+    {
+        "name": "Hemoglobina y Hematocrito",
+        "keywords": [
+            "hemoglobina",
+            "hematocrito",
+            "hb",
+            "hto"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Contaje de Plaquetas",
+        "keywords": [
+            "plaquetas",
+            "conteo"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Contaje de Blancos",
+        "keywords": [
+            "blancos",
+            "leucocitos",
+            "conteo"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Contaje de Reticulocitos",
+        "keywords": [
+            "reticulocitos",
+            "conteo"
+        ],
+        "price_usd": "7.00"
+    },
+    {
+        "name": "Contaje de Eosinófilos",
+        "keywords": [
+            "eosinofilos",
+            "conteo"
+        ],
+        "price_usd": "7.00"
+    },
+    {
+        "name": "V.S.G. (Velocidad de Sedimentación)",
+        "keywords": [
+            "vsg",
+            "velocidad",
+            "sedimentacion"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Grupo Sanguíneo y Factor RH",
+        "keywords": [
+            "grupo",
+            "sanguineo",
+            "rh",
+            "factor",
+            "tipo",
+            "sangre"
+        ],
+        "price_usd": "6.00"
+    },
+    {
+        "name": "Frotis de Sangre Periférica",
+        "keywords": [
+            "frotis",
+            "sangre",
+            "periferica"
+        ],
+        "price_usd": "8.00"
+    },
+    {
+        "name": "Investigación de Células L.E.",
+        "keywords": [
+            "celulas",
+            "le",
+            "lupus"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Investigación de Células Falciformes",
+        "keywords": [
+            "celulas",
+            "falciformes",
+            "drepanocitosis"
+        ],
+        "price_usd": "12.00"
+    },
+    {
+        "name": "Screening Neonatal (Perfil TSH, T4, G6P, PKU, GAO)",
+        "keywords": [
+            "screening",
+            "neonatal",
+            "prueba",
+            "talon",
+            "tsh",
+            "t4",
+            "g6p",
+            "pku",
+            "gao"
+        ],
+        "price_usd": "50.00"
+    },
+    {
+        "name": "Investigación de Malaria (Gota Gruesa)",
+        "keywords": [
+            "malaria",
+            "gota",
+            "gruesa",
+            "paludismo"
+        ],
+        "price_usd": "10.00"
+    },
+    {
+        "name": "Tiempo de Protrombina (P.T.)",
+        "keywords": [
+            "tiempo",
+            "protrombina",
+            "pt",
+            "coagulacion"
+        ],
+        "price_usd": "8.00"
+    },
+    {
+        "name": "Tiempo de Tromboplastina Parcial (P.T.T.)",
+        "keywords": [
+            "tiempo",
+            "tromboplastina",
+            "ptt",
+            "coagulacion"
+        ],
+        "price_usd": "8.00"
+    },
+    {
+        "name": "I.N.R.",
+        "keywords": [
+            "inr",
+            "coagulacion"
+        ],
+        "price_usd": "8.00"
+    },
+    {
+        "name": "Fibrinógeno",
+        "keywords": [
+            "fibrinogeno",
+            "coagulacion"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Dímero D",
+        "keywords": [
+            "dimero",
+            "d",
+            "coagulacion"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Anticoagulante Lúpico",
+        "keywords": [
+            "anticoagulante",
+            "lupico",
+            "lupus"
+        ],
+        "price_usd": "30.00"
+    },
+    {
+        "name": "Glicemia Basal",
+        "keywords": [
+            "glicemia",
+            "glucosa",
+            "basal",
+            "azucar"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Glicemia Post-Prandial",
+        "keywords": [
+            "glicemia",
+            "glucosa",
+            "post",
+            "prandial",
+            "azucar"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Curva de Tolerancia Glucosada (Carga 75g)",
+        "keywords": [
+            "curva",
+            "tolerancia",
+            "glucosa",
+            "glicemia",
+            "embarazo"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Hemoglobina Glicosilada (HbA1c)",
+        "keywords": [
+            "hemoglobina",
+            "glicosilada",
+            "hba1c",
+            "diabetes",
+            "glicada"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Urea",
+        "keywords": [
+            "urea",
+            "funcion",
+            "renal"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Creatinina",
+        "keywords": [
+            "creatinina",
+            "funcion",
+            "renal"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Depuración de Creatinina",
+        "keywords": [
+            "depuracion",
+            "creatinina",
+            "renal"
+        ],
+        "price_usd": "10.00"
+    },
+    {
+        "name": "Colesterol Total",
+        "keywords": [
+            "colesterol",
+            "total",
+            "perfil",
+            "lipidico"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Triglicéridos",
+        "keywords": [
+            "trigliceridos",
+            "perfil",
+            "lipidico"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Perfil Lipídico (Colesterol, Triglicéridos, HDL, VLDL, LDL)",
+        "keywords": [
+            "perfil",
+            "lipidico",
+            "colesterol",
+            "trigliceridos",
+            "hdl",
+            "vldl",
+            "ldl"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Ácido Úrico",
+        "keywords": [
+            "acido",
+            "urico"
+        ],
+        "price_usd": "5.00"
+    },
+    {
+        "name": "Calcio Sérico",
+        "keywords": [
+            "calcio",
+            "serico"
+        ],
+        "price_usd": "6.00"
+    },
+    {
+        "name": "Fósforo Sérico",
+        "keywords": [
+            "fosforo",
+            "serico"
+        ],
+        "price_usd": "6.00"
+    },
+    {
+        "name": "Magnesio Sérico",
+        "keywords": [
+            "magnesio",
+            "serico"
+        ],
+        "price_usd": "6.00"
+    },
+    {
+        "name": "Cloro Sérico",
+        "keywords": [
+            "cloro",
+            "serico"
+        ],
+        "price_usd": "6.00"
+    },
+    {
+        "name": "Electrolitos (Sodio, Potasio, Cloro)",
+        "keywords": [
+            "electrolitos",
+            "sodio",
+            "potasio",
+            "cloro",
+            "k",
+            "na",
+            "cl"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Proteínas Totales y Fraccionadas",
+        "keywords": [
+            "proteinas",
+            "totales",
+            "fraccionadas",
+            "albumina",
+            "globulina"
+        ],
+        "price_usd": "10.00"
+    },
+    {
+        "name": "Bilirrubina Total y Fraccionada",
+        "keywords": [
+            "bilirrubina",
+            "total",
+            "fraccionada",
+            "directa",
+            "indirecta"
+        ],
+        "price_usd": "10.00"
+    },
+    {
+        "name": "Gases Arteriales",
+        "keywords": [
+            "gases",
+            "arteriales"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Gases Venosos",
+        "keywords": [
+            "gases",
+            "venosos"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Hierro Sérico",
+        "keywords": [
+            "hierro",
+            "serico",
+            "ferrocinetica"
+        ],
+        "price_usd": "8.00"
+    },
+    {
+        "name": "Ferritina",
+        "keywords": [
+            "ferritina",
+            "ferrocinetica",
+            "hierro"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "T.I.B.C. (Capacidad Total de Fijación de Hierro)",
+        "keywords": [
+            "tibc",
+            "uibc",
+            "ferritina",
+            "ferrocinetica",
+            "hierro"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Insulina Basal",
+        "keywords": [
+            "insulina",
+            "basal"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Insulina Post-Prandial",
+        "keywords": [
+            "insulina",
+            "post",
+            "prandial"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Curva de Insulina",
+        "keywords": [
+            "curva",
+            "insulina"
+        ],
+        "price_usd": "35.00"
+    },
+    {
+        "name": "Péptido C",
+        "keywords": [
+            "peptido",
+            "c"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Hormona Antimulleriana (AMH)",
+        "keywords": [
+            "hormona",
+            "antimulleriana",
+            "amh",
+            "reserva",
+            "ovarica"
+        ],
+        "price_usd": "55.00"
+    },
+    {
+        "name": "T3 Total",
+        "keywords": [
+            "t3",
+            "total",
+            "tiroides",
+            "perfil",
+            "tiroideo"
+        ],
+        "price_usd": "12.00"
+    },
+    {
+        "name": "T4 Total",
+        "keywords": [
+            "t4",
+            "total",
+            "tiroides",
+            "perfil",
+            "tiroideo"
+        ],
+        "price_usd": "12.00"
+    },
+    {
+        "name": "T3 Libre",
+        "keywords": [
+            "t3",
+            "libre",
+            "tiroides",
+            "perfil",
+            "tiroideo"
+        ],
+        "price_usd": "12.00"
+    },
+    {
+        "name": "T4 Libre",
+        "keywords": [
+            "t4",
+            "libre",
+            "tiroides",
+            "perfil",
+            "tiroideo"
+        ],
+        "price_usd": "12.00"
+    },
+    {
+        "name": "T.S.H. (Hormona Tiroestimulante)",
+        "keywords": [
+            "tsh",
+            "tiroides",
+            "hormona",
+            "tiroestimulante",
+            "perfil",
+            "tiroideo"
+        ],
+        "price_usd": "12.00"
+    },
+    {
+        "name": "Tiroglobulina",
+        "keywords": [
+            "tiroglobulina",
+            "tiroides"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Anticuerpos Microsomales (Anti-TPO)",
+        "keywords": [
+            "ac",
+            "microsomales",
+            "anti-tpo",
+            "tiroides",
+            "hashimoto"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "Anticuerpos Tiroglobulínicos (Anti-TG)",
+        "keywords": [
+            "ac",
+            "tiroglobulinicos",
+            "anti-tg",
+            "tiroides",
+            "hashimoto"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "F.S.H. (Hormona Folículo Estimulante)",
+        "keywords": [
+            "fsh",
+            "hormona",
+            "foliculo",
+            "estimulante",
+            "perfil",
+            "femenino"
+        ],
+        "price_usd": "14.00"
+    },
+    {
+        "name": "L.H. (Hormona Luteinizante)",
+        "keywords": [
+            "lh",
+            "hormona",
+            "luteinizante",
+            "perfil",
+            "femenino"
+        ],
+        "price_usd": "14.00"
+    },
+    {
+        "name": "Progesterona",
+        "keywords": [
+            "progesterona",
+            "perfil",
+            "femenino"
+        ],
+        "price_usd": "14.00"
+    },
+    {
+        "name": "Estradiol (E2)",
+        "keywords": [
+            "estradiol",
+            "e2",
+            "perfil",
+            "femenino"
+        ],
+        "price_usd": "14.00"
+    },
+    {
+        "name": "Prolactina",
+        "keywords": [
+            "prolactina",
+            "prl"
+        ],
+        "price_usd": "14.00"
+    },
+    {
+        "name": "Índice de Andrógenos Libres",
+        "keywords": [
+            "indice",
+            "androgenos",
+            "libres"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "S.H.B.G. (Globulina Fijadora de Hormonas Sexuales)",
+        "keywords": [
+            "shbg",
+            "globulina",
+            "hormonas",
+            "sexuales"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Estriol",
+        "keywords": [
+            "estriol"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "BHCG Cuantificada (Prueba de Embarazo en Sangre)",
+        "keywords": [
+            "bhcg",
+            "cuantificada",
+            "embarazo",
+            "beta",
+            "gonadotropina"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Androstenediona",
+        "keywords": [
+            "androstenediona"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "Testosterona Total",
+        "keywords": [
+            "testosterona",
+            "total"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Testosterona Libre",
+        "keywords": [
+            "testosterona",
+            "libre"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "DHEA-SO4 (Dehidroepiandrosterona Sulfato)",
+        "keywords": [
+            "dhea-so4",
+            "dhea",
+            "dehidroepiandrosterona"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "17-Hidroxiprogesterona (17-OHP)",
+        "keywords": [
+            "17-hidroxiprogesterona",
+            "17-ohp"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Cortisol AM (8:00 a.m.)",
+        "keywords": [
+            "cortisol",
+            "am",
+            "estres"
+        ],
+        "price_usd": "16.00"
+    },
+    {
+        "name": "Cortisol PM (4:00 p.m.)",
+        "keywords": [
+            "cortisol",
+            "pm",
+            "estres"
+        ],
+        "price_usd": "16.00"
+    },
+    {
+        "name": "A.C.T.H. (Hormona Adrenocorticotropa)",
+        "keywords": [
+            "acth",
+            "adrenocorticotropa"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "P.T.H. (Hormona Paratiroidea Intacta)",
+        "keywords": [
+            "pth",
+            "paratiroidea",
+            "intacta"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "Hormona de Crecimiento (HGH)",
+        "keywords": [
+            "hormona",
+            "crecimiento",
+            "hgh"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Perfil Celíaco (Anti-Gliadina, Anti-Endomisio, Anti-Transglutaminasa, IgA)",
+        "keywords": [
+            "perfil",
+            "celiaco",
+            "celiaquia",
+            "anti-gliadina",
+            "anti-endomisio",
+            "anti-transglutaminasa",
+            "iga"
+        ],
+        "price_usd": "75.00"
+    },
+    {
+        "name": "Prueba Genética de Celiaquía HLA CELIAC (PCR)",
+        "keywords": [
+            "pcr",
+            "genetica",
+            "celiaquia",
+            "hla",
+            "celiac"
+        ],
+        "price_usd": "150.00"
+    },
+    {
+        "name": "CK (Creatina Quinasa)",
+        "keywords": [
+            "ck",
+            "creatina",
+            "quinasa",
+            "enzimas",
+            "cardiacas"
+        ],
+        "price_usd": "10.00"
+    },
+    {
+        "name": "CK-MB (Creatina Quinasa MB)",
+        "keywords": [
+            "ck-mb",
+            "ckmb",
+            "creatina",
+            "quinasa",
+            "enzimas",
+            "cardiacas",
+            "infarto"
+        ],
+        "price_usd": "12.00"
+    },
+    {
+        "name": "Troponina",
+        "keywords": [
+            "troponina",
+            "enzimas",
+            "cardiacas",
+            "infarto"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "Homocisteína",
+        "keywords": [
+            "homocisteina",
+            "riesgo",
+            "cardiaco"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "IgE Total (Inmunoglobulina E)",
+        "keywords": [
+            "ige",
+            "total",
+            "inmunoglobulina",
+            "alergia"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "IgG Sérica (Inmunoglobulina G)",
+        "keywords": [
+            "igg",
+            "serica",
+            "inmunoglobulina"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "IgM Sérica (Inmunoglobulina M)",
+        "keywords": [
+            "igm",
+            "serica",
+            "inmunoglobulina"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "ANA (Anticuerpos Antinucleares)",
+        "keywords": [
+            "ana",
+            "anticuerpos",
+            "antinucleares",
+            "reumatologia"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Anti-DNA (Doble Cadena)",
+        "keywords": [
+            "anti-dna",
+            "anti",
+            "dna",
+            "lupus"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "ANCA-C",
+        "keywords": [
+            "anca-c",
+            "anca",
+            "c",
+            "vasculitis"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "ANCA-P",
+        "keywords": [
+            "anca-p",
+            "anca",
+            "p",
+            "vasculitis"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Anti-Sm",
+        "keywords": [
+            "anti-sm",
+            "anti",
+            "sm",
+            "lupus"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "B2 Glicoproteína (IgG\/IgM)",
+        "keywords": [
+            "b2",
+            "glicoproteina",
+            "igg",
+            "igm",
+            "saf"
+        ],
+        "price_usd": "28.00"
+    },
+    {
+        "name": "Cardiolipinas (IgG\/IgM)",
+        "keywords": [
+            "cardiolipinas",
+            "igg",
+            "igm",
+            "saf"
+        ],
+        "price_usd": "28.00"
+    },
+    {
+        "name": "Anti Fosfolípidos (IgG\/IgM)",
+        "keywords": [
+            "anti",
+            "fosfolipidos",
+            "igg",
+            "igm",
+            "saf"
+        ],
+        "price_usd": "30.00"
+    },
+    {
+        "name": "Anti Ro (SS-A)",
+        "keywords": [
+            "anti",
+            "ro",
+            "ss-a",
+            "sjogren"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "Anti La (SS-B)",
+        "keywords": [
+            "anti",
+            "la",
+            "ss-b",
+            "sjogren"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "Anti-Scl70 (IgG)",
+        "keywords": [
+            "anti-scl70",
+            "scl70",
+            "esclerodermia"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "Anti-RNP (IgG)",
+        "keywords": [
+            "anti-rnp",
+            "rnp"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "Anti-Histonas",
+        "keywords": [
+            "anti-histonas",
+            "histonas"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "Complemento C3",
+        "keywords": [
+            "complemento",
+            "c3"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "Complemento C4",
+        "keywords": [
+            "complemento",
+            "c4"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "Complemento Ch50",
+        "keywords": [
+            "complemento",
+            "ch50"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Anti-CCP (Péptido Citrulinado)",
+        "keywords": [
+            "anti-ccp",
+            "ccp",
+            "peptido",
+            "citrulinado",
+            "artritis"
+        ],
+        "price_usd": "30.00"
+    },
+    {
+        "name": "Gram (Tinción de Gram)",
+        "keywords": [
+            "gram",
+            "tincion",
+            "bacteriologia"
+        ],
+        "price_usd": "8.00"
+    },
+    {
+        "name": "Hemocultivo",
+        "keywords": [
+            "hemocultivo",
+            "cultivo",
+            "sangre",
+            "bacteriologia"
+        ],
+        "price_usd": "30.00"
+    },
+    {
+        "name": "Coprocultivo",
+        "keywords": [
+            "coprocultivo",
+            "cultivo",
+            "heces",
+            "bacteriologia"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Urocultivo",
+        "keywords": [
+            "urocultivo",
+            "cultivo",
+            "orina",
+            "bacteriologia"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Espermocultivo",
+        "keywords": [
+            "espermocultivo",
+            "cultivo",
+            "semen",
+            "bacteriologia"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Cultivo Vagino-Rectal (Embarazo)",
+        "keywords": [
+            "cultivo",
+            "vagino-rectal",
+            "vaginal",
+            "rectal",
+            "embarazo",
+            "estreptococo"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Cultivo y Antibiograma (General)",
+        "keywords": [
+            "cultivo",
+            "antibiograma",
+            "secrecion",
+            "herida"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Tinta China",
+        "keywords": [
+            "tinta",
+            "china",
+            "hongos"
+        ],
+        "price_usd": "10.00"
+    },
+    {
+        "name": "BK (Examen de Koch)",
+        "keywords": [
+            "bk",
+            "koch",
+            "tuberculosis",
+            "esputo"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Vitamina D (25-OH Vitamina D)",
+        "keywords": [
+            "vitamina",
+            "d",
+            "25-oh",
+            "25-hidroxi"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "C.T.X. (B Cross Laps)",
+        "keywords": [
+            "ctx",
+            "b",
+            "cross",
+            "laps",
+            "metabolismo",
+            "oseo"
+        ],
+        "price_usd": "30.00"
+    },
+    {
+        "name": "Examen de Heces (Coproanálisis)",
+        "keywords": [
+            "examen",
+            "heces",
+            "coproanalisis"
+        ],
+        "price_usd": "8.00"
+    },
+    {
+        "name": "Azúcares Reductores (Heces)",
+        "keywords": [
+            "azucares",
+            "reductores",
+            "heces"
+        ],
+        "price_usd": "6.00"
+    },
+    {
+        "name": "Sangre Oculta en Heces",
+        "keywords": [
+            "sangre",
+            "oculta",
+            "heces",
+            "thevenon"
+        ],
+        "price_usd": "7.00"
+    },
+    {
+        "name": "Sudan III (Grasa en Heces)",
+        "keywords": [
+            "sudan",
+            "iii",
+            "grasa",
+            "heces"
+        ],
+        "price_usd": "7.00"
+    },
+    {
+        "name": "Leucocitos Fecales",
+        "keywords": [
+            "leucocitos",
+            "fecales",
+            "heces"
+        ],
+        "price_usd": "7.00"
+    },
+    {
+        "name": "Rotavirus (Antígeno en Heces)",
+        "keywords": [
+            "rotavirus",
+            "antigeno",
+            "heces"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Adenovirus (Antígeno en Heces)",
+        "keywords": [
+            "adenovirus",
+            "antigeno",
+            "heces"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Calprotectina en Heces",
+        "keywords": [
+            "calprotectina",
+            "heces",
+            "inflamacion"
+        ],
+        "price_usd": "40.00"
+    },
+    {
+        "name": "Zonulina en Heces",
+        "keywords": [
+            "zonulina",
+            "heces",
+            "permeabilidad"
+        ],
+        "price_usd": "45.00"
+    },
+    {
+        "name": "Helicobacter Pylori (Antígeno en Heces)",
+        "keywords": [
+            "helicobacter",
+            "pylori",
+            "antigeno",
+            "heces"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Epstein Barr (IgG, IgM)",
+        "keywords": [
+            "epstein",
+            "barr",
+            "igg",
+            "igm",
+            "mononucleosis"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Citomegalovirus (IgG, IgM)",
+        "keywords": [
+            "citomegalovirus",
+            "cmv",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Rubéola (IgG, IgM)",
+        "keywords": [
+            "rubeola",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Herpes Simple I (IgG, IgM)",
+        "keywords": [
+            "herpes",
+            "simple",
+            "i",
+            "1",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Herpes Simple II (IgG, IgM)",
+        "keywords": [
+            "herpes",
+            "simple",
+            "ii",
+            "2",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Chlamydia Trachomatis (IgG, IgM)",
+        "keywords": [
+            "chlamydia",
+            "trachomatis",
+            "clamidia",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "28.00"
+    },
+    {
+        "name": "Trypanosoma Cruzi (Chagas) (IgG\/IgM)",
+        "keywords": [
+            "trypanosoma",
+            "cruzi",
+            "chagas",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "Treponema Pallidum (Sífilis) (IgG\/IgM)",
+        "keywords": [
+            "treponema",
+            "pallidum",
+            "sifilis",
+            "igg",
+            "igm",
+            "vdrl"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "Parvovirus (IgM, IgG)",
+        "keywords": [
+            "parvovirus",
+            "b19",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Leptospira (IgM, IgG)",
+        "keywords": [
+            "leptospira",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "SAARS-CoV-2 (Anticuerpos IgG\/IgM)",
+        "keywords": [
+            "sars-cov-2",
+            "covid",
+            "anticuerpos",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Dengue (IgG, IgM, AgNS1)",
+        "keywords": [
+            "dengue",
+            "igg",
+            "igm",
+            "ns1",
+            "antigeno"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Helicobacter Pylori (Sangre IgA\/IgM\/IgG)",
+        "keywords": [
+            "helicobacter",
+            "pylori",
+            "sangre",
+            "iga",
+            "igm",
+            "igg"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Mycoplasma Pneumoniae (IgM\/IgG)",
+        "keywords": [
+            "mycoplasma",
+            "pneumoniae",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "28.00"
+    },
+    {
+        "name": "Chlamydia Pneumoniae (IgM\/IgG)",
+        "keywords": [
+            "chlamydia",
+            "pneumoniae",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "28.00"
+    },
+    {
+        "name": "Varicela Zoster (IgG\/IgM)",
+        "keywords": [
+            "varicela",
+            "zoster",
+            "lechina",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Sarampión (IgG\/IgM)",
+        "keywords": [
+            "sarampion",
+            "igg",
+            "igm"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "CEA (Antígeno Carcinoembrionario)",
+        "keywords": [
+            "cea",
+            "antigeno",
+            "carcinoembrionario",
+            "marcador",
+            "tumoral"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "CA 125 (Marcador Tumoral Ovario)",
+        "keywords": [
+            "ca",
+            "125",
+            "ovario",
+            "marcador",
+            "tumoral"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "CA 19-9 (Marcador Tumoral Páncreas)",
+        "keywords": [
+            "ca",
+            "19-9",
+            "pancreas",
+            "marcador",
+            "tumoral"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "CA 15-3 (Marcador Tumoral Mama)",
+        "keywords": [
+            "ca",
+            "15-3",
+            "mama",
+            "marcador",
+            "tumoral"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Alfafetoproteína (AFP)",
+        "keywords": [
+            "alfafetoproteina",
+            "afp",
+            "marcador",
+            "tumoral"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "PSA Total (Antígeno Prostático Específico)",
+        "keywords": [
+            "psa",
+            "total",
+            "prostata",
+            "antigeno",
+            "prostatico"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "PSA Libre",
+        "keywords": [
+            "psa",
+            "libre",
+            "prostata"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "B2 Microglobulina",
+        "keywords": [
+            "b2",
+            "microglobulina",
+            "marcador",
+            "tumoral"
+        ],
+        "price_usd": "22.00"
+    },
+    {
+        "name": "Hepatitis A (IgM)",
+        "keywords": [
+            "hepatitis",
+            "a",
+            "igm",
+            "hva"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Hepatitis A Total (IgG)",
+        "keywords": [
+            "hepatitis",
+            "a",
+            "total",
+            "igg",
+            "hva"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Hepatitis B (Antígeno de Superficie HBsAg)",
+        "keywords": [
+            "hepatitis",
+            "b",
+            "antigeno",
+            "superficie",
+            "hbsag",
+            "hvb"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Hepatitis B (Core IgM HBcIgM)",
+        "keywords": [
+            "hepatitis",
+            "b",
+            "core",
+            "igm",
+            "hbcigm",
+            "hvb"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Hepatitis B (Core Total)",
+        "keywords": [
+            "hepatitis",
+            "b",
+            "core",
+            "total",
+            "hvb"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Hepatitis B (Anticuerpos Anti-HBsAg \/ AUSAB)",
+        "keywords": [
+            "hepatitis",
+            "b",
+            "anticuerpos",
+            "anti-hbsag",
+            "ausab",
+            "vacuna"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Hepatitis C Total (Anticuerpos)",
+        "keywords": [
+            "hepatitis",
+            "c",
+            "total",
+            "anticuerpos",
+            "hvc"
+        ],
+        "price_usd": "20.00"
+    },
+    {
+        "name": "Examen de Orina (Uroanálisis)",
+        "keywords": [
+            "examen",
+            "orina",
+            "uroanalisis",
+            "parcial"
+        ],
+        "price_usd": "8.00"
+    },
+    {
+        "name": "Proteinuria en 24 Horas",
+        "keywords": [
+            "proteinuria",
+            "proteinas",
+            "orina",
+            "24",
+            "horas"
+        ],
+        "price_usd": "10.00"
+    },
+    {
+        "name": "Microproteinuria (Microalbúmina)",
+        "keywords": [
+            "microproteinuria",
+            "microalbumina",
+            "orina"
+        ],
+        "price_usd": "15.00"
+    },
+    {
+        "name": "Espermatograma",
+        "keywords": [
+            "espermatograma",
+            "semen",
+            "fertilidad"
+        ],
+        "price_usd": "25.00"
+    },
+    {
+        "name": "Multiplex de Virus y Bacterias Respiratorias (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "respiratorio",
+            "virus",
+            "bacterias",
+            "influenza",
+            "sincitial"
+        ],
+        "price_usd": "150.00"
+    },
+    {
+        "name": "PCR para SARS-CoV-2 (COVID-19)",
+        "keywords": [
+            "pcr",
+            "sars-cov-2",
+            "covid",
+            "coronavirus",
+            "hisopado"
+        ],
+        "price_usd": "60.00"
+    },
+    {
+        "name": "Multiplex Complejo Mycobacterium Tuberculoso (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "mycobacterium",
+            "tuberculoso",
+            "tuberculosis"
+        ],
+        "price_usd": "120.00"
+    },
+    {
+        "name": "Multiplex Sistema Nervioso Central (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "sistema",
+            "nervioso",
+            "central",
+            "meningitis",
+            "herpes"
+        ],
+        "price_usd": "140.00"
+    },
+    {
+        "name": "Multiplex Familia Herpes Virus (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "familia",
+            "herpes",
+            "virus",
+            "epstein",
+            "barr",
+            "citomegalovirus"
+        ],
+        "price_usd": "130.00"
+    },
+    {
+        "name": "PCR Toxoplasma gondii",
+        "keywords": [
+            "pcr",
+            "toxoplasma",
+            "gondii",
+            "toxoplasmosis"
+        ],
+        "price_usd": "70.00"
+    },
+    {
+        "name": "Multiplex Viral (EB, CMV, Adenovirus, Parvovirus B19) (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "viral",
+            "eb",
+            "cmv",
+            "adenovirus",
+            "parvovirus"
+        ],
+        "price_usd": "120.00"
+    },
+    {
+        "name": "Multiplex de Meningitis Bacteriana (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "meningitis",
+            "bacteriana",
+            "influenzae",
+            "meningitidis"
+        ],
+        "price_usd": "110.00"
+    },
+    {
+        "name": "Multiplex Zika, Dengue, Chikungunya (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "zika",
+            "dengue",
+            "chikungunya",
+            "arbovirus"
+        ],
+        "price_usd": "90.00"
+    },
+    {
+        "name": "Multiplex Infecciones por Garrapatas (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "garrapatas",
+            "borrelia",
+            "rickettsia",
+            "ehrlichia"
+        ],
+        "price_usd": "130.00"
+    },
+    {
+        "name": "Multiplex STD (ETS por PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "std",
+            "ets",
+            "gonorrhoeae",
+            "chlamydia",
+            "mycoplasma",
+            "trichomonas"
+        ],
+        "price_usd": "100.00"
+    },
+    {
+        "name": "Tipificación de Virus del Papiloma Humano (VPH PCR, 32 Genotipos)",
+        "keywords": [
+            "pcr",
+            "vph",
+            "tipificacion",
+            "virus",
+            "papiloma",
+            "humano",
+            "genotipos"
+        ],
+        "price_usd": "80.00"
+    },
+    {
+        "name": "PCR Treponema pallidum (Sífilis)",
+        "keywords": [
+            "pcr",
+            "treponema",
+            "pallidum",
+            "sifilis"
+        ],
+        "price_usd": "70.00"
+    },
+    {
+        "name": "Multiplex Candida (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "candida",
+            "albicans",
+            "glabrata",
+            "krusei"
+        ],
+        "price_usd": "75.00"
+    },
+    {
+        "name": "Multiplex de Trombofilias (PCR)",
+        "keywords": [
+            "pcr",
+            "multiplex",
+            "trombofilias",
+            "factor",
+            "v",
+            "leiden",
+            "mthfr"
+        ],
+        "price_usd": "160.00"
+    },
+    {
+        "name": "PCR Clostridium difficile (Toxina A+B)",
+        "keywords": [
+            "pcr",
+            "clostridium",
+            "difficile",
+            "toxina",
+            "a",
+            "b"
+        ],
+        "price_usd": "65.00"
+    },
+    {
+        "name": "PCR DE ONCOGENES BCRA1 y BCRA2",
+        "keywords": [
+            "pcr",
+            "oncogenes",
+            "bcra1",
+            "bcra2",
+            "brca",
+            "cancer",
+            "mama",
+            "ovario"
+        ],
+        "price_usd": "250.00"
+    },
+    {
+        "name": "Panel Alimentario Venezolano IgE (20 Alérgenos)",
+        "keywords": [
+            "panel",
+            "alimentario",
+            "venezolano",
+            "ige",
+            "alergia"
+        ],
+        "price_usd": "80.00"
+    },
+    {
+        "name": "Panel Inhalante Venezolano IgE (20 Alérgenos)",
+        "keywords": [
+            "panel",
+            "inhalante",
+            "venezolano",
+            "ige",
+            "alergia",
+            "acaros"
+        ],
+        "price_usd": "80.00"
+    },
+    {
+        "name": "Panel Mixto Venezolano IgE (20 Alérgenos)",
+        "keywords": [
+            "panel",
+            "mixto",
+            "venezolano",
+            "ige",
+            "alergia"
+        ],
+        "price_usd": "80.00"
+    },
+    {
+        "name": "Panel Alimentos Intolerancias IgG (24 Alérgenos)",
+        "keywords": [
+            "panel",
+            "alimentos",
+            "intolerancias",
+            "igg",
+            "24"
+        ],
+        "price_usd": "90.00"
+    },
+    {
+        "name": "Panel Alimentos Intolerancias IgG (40 Alérgenos)",
+        "keywords": [
+            "panel",
+            "alimentos",
+            "intolerancias",
+            "igg",
+            "40"
+        ],
+        "price_usd": "110.00"
+    },
+    {
+        "name": "Vitamina B12",
+        "keywords": [
+            "vitamina",
+            "b12",
+            "cianocobalamina"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "Ácido Fólico (Vitamina B9)",
+        "keywords": [
+            "acido",
+            "folico",
+            "vitamina",
+            "b9",
+            "folatos"
+        ],
+        "price_usd": "18.00"
+    },
+    {
+        "name": "Perfil IgE 96 (96 alérgenos)",
+        "keywords": [
+            "perfil",
+            "ige",
+            "96",
+            "alergia",
+            "alergias",
+            "panel"
+        ],
+        "price_usd": "157.50"
+    },
+    {
+        "name": "Perfil IgE 128 (128 alérgenos)",
+        "keywords": [
+            "perfil",
+            "ige",
+            "128",
+            "alergia",
+            "alergias",
+            "panel"
+        ],
+        "price_usd": "180.00"
+    },
+    {
+        "name": "Panel IgG 96 (96 alimentos)",
+        "keywords": [
+            "panel",
+            "igg",
+            "96",
+            "alimentos",
+            "intolerancia"
+        ],
+        "price_usd": "157.50"
+    },
+    {
+        "name": "Panel IgG A60 (60 alimentos)",
+        "keywords": [
+            "panel",
+            "igg",
+            "a60",
+            "60",
+            "alimentos",
+            "intolerancia"
+        ],
+        "price_usd": "180.00"
+    },
+    {
+        "name": "Panel IgG4-42 (Seguimiento Inmunoterapia)",
+        "keywords": [
+            "panel",
+            "igg4",
+            "42",
+            "inmunoterapia",
+            "alergia"
+        ],
+        "price_usd": "175.00"
+    },
+    {
+        "name": "Panel IgG ANA-18 (Anticuerpos Antinucleares)",
+        "keywords": [
+            "panel",
+            "igg",
+            "ana",
+            "18",
+            "autoinmunidad",
+            "antinucleares",
+            "reumatologia"
+        ],
+        "price_usd": "112.50"
+    }
+]

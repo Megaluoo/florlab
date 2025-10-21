@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Florlab</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background-color: var(--light-color);
+        }
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background: var(--white-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .login-container h2 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #DDD;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .error-msg {
+            background: #ffebee;
+            color: #c62828;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2><strong>FLOR</strong>LAB - Admin</h2>
+        
+        <?php
+        // Mostrar error si la URL contiene ?error=1
+        if (isset($_GET['error'])) {
+            echo '<div class="error-msg">Usuario o clave incorrecta.</div>';
+        }
+        ?>
+
+        <form action="login.php" method="POST" class="login-form">
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit" class="cta-button primary full-width">Ingresar</button>
+        </form>
+    </div>
+</body>
+</html>
