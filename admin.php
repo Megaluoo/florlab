@@ -4,7 +4,7 @@ session_start();
 
 // 1. Proteger la página
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header('Location: login.html');
+    header('Location: login_page.php');
     exit;
 }
 
