@@ -3,447 +3,593 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flor Lab - Excelencia en Diagnóstico Clínico | Maracay, Aragua</title>
-    <meta name="description" content="Laboratorio clínico de vanguardia en Maracay. Tecnología de punta, precisión absoluta y resultados confiables para tu salud.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>FlorLab - Laboratorio Clínico de Vanguardia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* --- ESTE ES EL CSS COMPLETO Y CORREGIDO (Basado en index (4).html + fixes) --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @font-face {
+            font-family: 'Gabriola';
+            src: url('gabriola.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
         }
 
         :root {
-            --primary-color: #667eea;
-            --secondary-color: #50c878;
-            --accent-color: #ff6b6b;
-            --dark-color: #2c3e50;
-            --light-color: #f5f7fa;
+            --primary-color: #d81b60;
+            --secondary-color: #00838f;
             --text-color: #333;
-            --text-light: #666;
-            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.12);
-            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
-            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.2);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --text-light: #555;
+            --background-color: #ffffff;
+            --light-gray-bg: #f8f9fa;
+            --white-color: #ffffff;
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+            --font-gabriola: 'Gabriola', sans-serif;
         }
 
-        html {
-             scroll-behavior: smooth; /* Make scrolling smooth */
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: var(--font-secondary);
             color: var(--text-color);
-            overflow-x: hidden;
-            background-color: #ffffff;
+            background-color: var(--background-color);
+            line-height: 1.7;
         }
 
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
+        /* --- Header --- */
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: padding 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 0.5rem 5%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--dark-color); }
-
-        /* Top Bar */
-        .top-bar { background: var(--dark-color); color: white; padding: 15px 0; font-size: 0.9rem; position: relative; z-index: 1000; }
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .top-bar-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .contact-info { display: flex; gap: 30px; flex-wrap: wrap; }
-        .contact-info span { display: flex; align-items: center; gap: 10px; font-weight: 500; }
-        .social-links { display: flex; gap: 15px; }
-        .social-links a { color: white; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; transition: var(--transition); text-decoration: none; }
-        .social-links a:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
-
-        /* Header */
-        header { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 999; transition: var(--transition); padding: 15px 0; }
-        header.scrolled { box-shadow: var(--shadow-md); }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { display: flex; align-items: center; gap: 16px; transition: var(--transition); text-decoration: none; }
-        .logo:hover { transform: scale(1.02); }
-        .logo-icon { width: 70px; height: 70px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); }
-        .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
-        .logo-text h1 { background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; }
-        .logo-text p { color: var(--secondary-color); font-size: 0.95rem; font-weight: 600; margin-top: 2px; }
-
-        /* Desktop Navigation Styles */
         nav {
-            position: static; /* Override potential fixed positioning from mobile */
-            height: auto;
-            width: auto;
-            background: none;
-            box-shadow: none;
-            padding: 0;
-            right: auto; /* Ensure it's not positioned off-screen */
-            display: block; /* Ensure it's visible on desktop */
-        }
-        nav ul {
-            display: flex; /* Horizontal layout */
-            flex-direction: row; /* Explicitly row */
-            list-style: none;
-            gap: 35px;
-            padding: 0;
-            margin: 0;
-            align-items: center; /* Vertically align items if needed */
-        }
-        nav a { text-decoration: none; color: var(--text-color); font-weight: 600; font-size: 0.95rem; transition: var(--transition); position: relative; padding: 8px 0; }
-        nav a::after { content: ''; position: absolute; width: 0; height: 3px; bottom: 0; left: 0; background: var(--gradient-1); transition: width 0.3s ease; border-radius: 2px; }
-        nav a:hover::after { width: 100%; }
-        nav a:hover { color: var(--primary-color); }
-
-        /* Close Menu Button - Hidden on Desktop */
-        .close-menu {
-            display: none;
-            position: absolute; top: 20px; right: 20px; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); background: none; border: none; padding: 0;
-        }
-
-        .header-buttons { display: flex; gap: 15px; }
-        .cta-button { padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; box-shadow: var(--shadow-sm); border: none; cursor: pointer; }
-        .cta-button:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
-        .btn-primary { background: var(--gradient-1); color: white; }
-        .btn-secondary { background: var(--gradient-2); color: white; }
-
-        /* Mobile Menu Toggle - Hidden on Desktop */
-        .mobile-menu-toggle {
-            display: none;
-            font-size: 1.5rem; cursor: pointer; color: var(--primary-color); background: none; border: none; padding: 0;
-        }
-
-        /* Hero Section */
-        .hero { position: relative; height: 100vh; display: flex; align-items: center; overflow: hidden; }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://picsum.photos/seed/medical-lab-advanced/1920/1080.jpg') center/cover; z-index: -2; }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.8)); z-index: -1; }
-        .lab-animation { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
-        .dna-strand { position: absolute; width: 6px; height: 120px; background: linear-gradient(to bottom, #ff6b6b, #4ecdc4); border-radius: 3px; animation: dnaFloat 20s infinite linear; }
-        .dna-connector { position: absolute; width: 40px; height: 3px; background: linear-gradient(to right, #ff6b6b, #4ecdc4); transform-origin: left center; border-radius: 2px; }
-        @keyframes dnaFloat { 0% { transform: translateY(100vh) rotate(0deg); } 100% { transform: translateY(-100vh) rotate(360deg); } }
-        .molecule { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); animation: moleculeFloat 20s infinite ease-in-out; }
-        @keyframes moleculeFloat { 0%, 100% { transform: translate(0, 0) scale(1); } 25% { transform: translate(100px, -50px) scale(1.1); } 50% { transform: translate(-50px, -100px) scale(0.9); } 75% { transform: translate(-100px, 50px) scale(1.05); } }
-        .cell { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent); animation: cellPulse 8s infinite ease-in-out; }
-        @keyframes cellPulse { 0%, 100% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(1.2); opacity: 0.6; } }
-        .test-tube { position: absolute; width: 18px; height: 70px; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(79, 172, 254, 0.4)); border-radius: 0 0 12px 12px; border: 1px solid rgba(255, 255, 255, 0.3); border-top: none; animation: testTubeFloat 18s infinite ease-in-out; }
-        .test-tube::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 24px; height: 6px; background: rgba(255, 255, 255, 0.5); border-radius: 6px 6px 0 0; }
-        .test-tube::after { content: ''; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); width: 10px; height: 25px; background: rgba(79, 172, 254, 0.6); border-radius: 5px; }
-        @keyframes testTubeFloat { 0%, 100% { transform: translateY(0) rotate(0deg); } 25% { transform: translateY(-30px) rotate(5deg); } 50% { transform: translateY(0) rotate(0deg); } 75% { transform: translateY(30px) rotate(-5deg); } }
-        .hero-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; color: white; z-index: 2; position: relative; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.2); padding: 10px 18px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 24px; backdrop-filter: blur(10px); }
-        .hero-title { font-size: 4.5rem; font-weight: 800; margin-bottom: 24px; line-height: 1.1; max-width: 800px; }
-        .hero-subtitle { font-size: 1.4rem; margin-bottom: 40px; max-width: 600px; line-height: 1.6; opacity: 0.9; }
-        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
-        .btn-hero { padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; }
-        .btn-hero-primary { background: white; color: var(--primary-color); box-shadow: var(--shadow-lg); }
-        .btn-hero-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-xl); }
-        .btn-hero-secondary { background: transparent; color: white; border: 2px solid white; }
-        .btn-hero-secondary:hover { background: white; color: var(--primary-color); transform: translateY(-3px); }
-        .scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite; color: white; font-size: 1.5rem; text-decoration: none; }
-        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); } 40% { transform: translateX(-50%) translateY(-15px); } 60% { transform: translateX(-50%) translateY(-7px); } }
-
-        /* Section Styles */
-        .section { padding: 100px 0; }
-        .section-header { text-align: center; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .section-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(102, 126, 234, 0.1); color: var(--primary-color); padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; }
-        .section-title { font-size: 3rem; font-weight: 800; margin-bottom: 20px; color: var(--text-color); }
-        .section-subtitle { font-size: 1.2rem; color: var(--text-light); line-height: 1.6; }
-
-        /* Features Section */
-        .features { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .feature-card { background: white; padding: 40px 30px; border-radius: 20px; box-shadow: var(--shadow-md); transition: var(--transition); position: relative; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); }
-        .feature-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--gradient-1); }
-        .feature-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); }
-        .feature-icon { width: 70px; height: 70px; margin: 0 auto 24px; background: var(--gradient-1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: var(--shadow-md); transition: var(--transition); }
-        .feature-card:hover .feature-icon { transform: scale(1.1) rotate(5deg); box-shadow: var(--shadow-lg); }
-        .feature-card h3 { font-size: 1.4rem; margin-bottom: 16px; color: var(--text-color); text-align: center; }
-        .feature-card p { color: var(--text-light); line-height: 1.7; text-align: center; }
-
-        /* Services Section */
-        .services { background: white; }
-        .search-wrapper { max-width: 700px; margin: 0 auto 50px; position: relative; }
-        #test-search { width: 100%; padding: 18px 25px; font-size: 1.1rem; border: 1px solid #DDD; border-radius: 12px; outline: none; transition: all 0.3s ease; }
-        #test-search:focus { border-color: var(--primary-color); box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1); }
-        .search-results-container { position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid #EAEAEA; border-top: none; border-radius: 0 0 12px 12px; box-shadow: var(--shadow-md); max-height: 400px; overflow-y: auto; z-index: 900; display: none; }
-        .result-item { padding: 15px 25px; cursor: pointer; transition: background-color 0.2s ease; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
-        .result-item:last-child { border-bottom: none; }
-        .result-item:hover { background-color: var(--light-color); }
-        .result-item-name { font-weight: 600; color: var(--text-color); }
-        .result-item-price { text-align: right; }
-        .price-usd { font-weight: 700; color: var(--dark-color); font-size: 1rem; }
-        .price-bcv { font-size: 0.9rem; color: var(--text-light); display: block; }
-
-        /* Home Service Section */
-        .home-service { background: var(--gradient-1); position: relative; overflow: hidden; }
-        .home-service::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%); animation: rotate 30s linear infinite; }
-        @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .home-service .section-title, .home-service .section-subtitle { color: white; }
-        .home-service .section-badge { background: rgba(255, 255, 255, 0.2); color: white; }
-        .home-service-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
-        .home-service-text { color: white; }
-        .home-service-text h2 { font-size: 2.5rem; margin-bottom: 24px; font-weight: 800; }
-        .home-service-text p { font-size: 1.1rem; margin-bottom: 30px; line-height: 1.7; opacity: 0.9; }
-        .home-service-features { list-style: none; margin-bottom: 40px; padding: 0; }
-        .home-service-features li { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; font-size: 1.05rem; }
-        .home-service-features i { font-size: 1.3rem; color: #4facfe; }
-        .home-service-img { position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-xl); transform: perspective(1000px) rotateY(-5deg); transition: transform 0.5s ease; }
-        .home-service-img:hover { transform: perspective(1000px) rotateY(0deg); }
-        .home-service-img img { width: 100%; height: auto; display: block; }
-        .btn-home-service { background: white; color: var(--primary-color); padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; box-shadow: var(--shadow-lg); border: none; cursor: pointer; }
-        .btn-home-service:hover { transform: translateY(-3px); box-shadow: var(--shadow-xl); }
-
-        /* About Section */
-        .about { background: #f8fafc; }
-        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .about-text h2 { font-size: 2.5rem; margin-bottom: 24px; color: var(--text-color); position: relative; }
-        .about-text h2::after { content: ''; position: absolute; bottom: -12px; left: 0; width: 80px; height: 4px; background: var(--gradient-1); border-radius: 2px; }
-        .about-text p { margin-bottom: 20px; color: var(--text-light); font-size: 1.05rem; line-height: 1.7; }
-        .about-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
-        .stat-item { background: white; padding: 30px; border-radius: 16px; box-shadow: var(--shadow-md); text-align: center; transition: var(--transition); }
-        .stat-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-        .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 8px; }
-        .stat-label { color: var(--text-light); font-weight: 600; font-size: 0.95rem; }
-        .about-img { position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-xl); }
-        .about-img img { width: 100%; height: auto; display: block; transition: transform 0.5s ease; }
-        .about-img:hover img { transform: scale(1.03); }
-
-        /* --- Testimonials Section with Auto-Scroll --- */
-        .testimonials { background: white; }
-        .testimonials .container { overflow: hidden; /* Crucial: Clips the content */ }
-        .testimonials-slider {
             display: flex;
-            gap: 30px;
-            padding-bottom: 30px;
-            /* Width = (card width + gap) * total cards (8 originals + 8 duplicates = 16) */
-            width: calc((400px + 30px) * 16);
-            /* Adjust duration for desired speed (e.g., 80s for slower scroll) */
-            animation: scrollLeft 80s linear infinite;
+            justify-content: space-between;
+            align-items: center;
         }
-        .testimonials-slider:hover { animation-play-state: paused; } /* Pause on hover */
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        nav .logo img { 
+            height: 50px; 
+            transition: height 0.3s ease; 
+        }
+        header.scrolled .logo img { 
+            height: 40px; 
+        }
+        
+        nav .logo span {
+            font-family: var(--font-gabriola);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-left: 10px;
+        }
+
+        nav ul { list-style: none; display: flex; align-items: center; }
+        nav ul li { margin-left: 2.5rem; }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-family: var(--font-primary);
+            transition: color 0.3s ease;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        nav ul li a:hover::after { width: 100%; }
+        nav ul li a:hover { color: var(--primary-color); }
+        
+        .nav-cta a {
+            background: var(--primary-color);
+            color: var(--white-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .nav-cta a:hover {
+            background: var(--secondary-color);
+            color: var(--white-color);
+            transform: scale(1.05);
+        }
+        .nav-cta a::after { display: none; } /* No underline for CTA */
+
+        /* --- Hero Section --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: var(--white-color);
+            min-height: 95vh;
+            overflow: hidden;
+        }
+        .hero-text { max-width: 55%; animation: slideInFromLeft 1s ease-out; }
+        .hero-text h1 {
+            font-family: var(--font-primary);
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .hero-text p { font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 90%; }
+        .cta-button {
+            background-color: var(--white-color);
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-family: var(--font-primary);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .hero-image {
+            animation: slideInFromRight 1s ease-out;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .hours-24h {
+            font-family: var(--font-primary);
+            font-size: 10rem;
+            font-weight: 800;
+            color: var(--white-color);
+            text-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+            line-height: 1;
+            padding: 0 20px;
+        }
+        
+        .hours-text {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white-color);
+            margin-top: -20px;
+            animation: pulse-large 2s infinite;
+        }
+        
+        @keyframes pulse-large {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* --- General Section Styling --- */
+        .section { padding: 5rem 5%; text-align: center; }
+        .section.bg-light { background-color: var(--light-gray-bg); }
+        .section-title {
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-subtitle {
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* --- Why Us Section --- */
+        .why-us-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .feature-card {
+            background: var(--background-color); padding: 2.5rem 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .feature-card .icon {
+            display: flex; align-items: center; justify-content: center; width: 60px; height: 60px;
+            margin: 0 auto 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white; border-radius: 50%;
+        }
+        .feature-card h3 { font-family: var(--font-primary); color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.4rem; }
+
+        /* --- Testimonials Section --- */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .testimonial-card {
-            min-width: 400px; max-width: 400px; flex-shrink: 0; /* Prevent shrinking */
-            background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-md);
-            position: relative; transition: var(--transition); border: 1px solid rgba(0, 0, 0, 0.05);
+            background: var(--white-color); padding: 2rem; border-radius: 15px; text-align: left;
+            border-top: 5px solid var(--secondary-color); box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        .testimonial-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); }
-        .testimonial-card::before { content: '"'; position: absolute; top: 20px; left: 20px; font-size: 80px; color: rgba(102, 126, 234, 0.1); font-family: Georgia, serif; z-index: 1; /* Ensure quote is behind text */}
-        .testimonial-text { font-style: italic; margin-bottom: 24px; color: var(--text-light); font-size: 1.05rem; line-height: 1.7; position: relative; z-index: 2; /* Ensure text is above quote */ }
-        .testimonial-author { display: flex; align-items: center; gap: 16px; position: relative; z-index: 2;}
-        .author-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-color); }
-        .author-info h4 { color: var(--text-color); margin-bottom: 4px; }
-        .author-info p { color: var(--text-light); font-size: 0.9rem; }
-        .rating { color: #ffc107; margin-bottom: 16px; font-size: 1.1rem; position: relative; z-index: 2;}
+        .testimonial-card p { font-style: italic; color: var(--text-light); margin-bottom: 1rem; }
+        .testimonial-card .author { font-weight: 700; color: var(--primary-color); font-family: var(--font-primary); }
+        .testimonial-card .stars { color: #f39c12; }
 
-        /* Keyframes for the scrolling animation */
-        @keyframes scrollLeft {
-            0% { transform: translateX(0); }
-            100% {
-                /* Move left by the width of the ORIGINAL 8 cards + their gaps */
-                transform: translateX(calc(-(400px + 30px) * 8));
-            }
+        /* --- Patient Process Section --- */
+        .process-steps { display: flex; justify-content: space-between; gap: 2rem; margin-top: 4rem; position: relative; }
+        .process-steps::before {
+            content: ''; position: absolute; top: 40px; left: 15%; right: 15%; height: 2px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color)); opacity: 0.3;
         }
-        /* --- End Testimonials --- */
-
-        /* Results Portal Section */
-        .results-portal { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
-        .portal-container { max-width: 900px; margin: 0 auto; background: white; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-xl); }
-        .portal-header { background: var(--gradient-3); color: white; padding: 40px; text-align: center; position: relative; overflow: hidden; }
-        .portal-header::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%); animation: rotate 20s linear infinite; }
-        .portal-header h3 { font-size: 2rem; margin-bottom: 12px; position: relative; z-index: 2; }
-        .portal-header p { font-size: 1.05rem; position: relative; z-index: 2; opacity: 0.9; }
-        .portal-body { padding: 50px; }
-        .login-form { max-width: 450px; margin: 0 auto; }
-        .bcv-rate { background: #f8fafc; padding: 15px; border-radius: 8px; font-weight: 600; margin-bottom: 25px; text-align: center; border: 1px solid #e2e8f0; }
+        .step { flex: 1; position: relative; }
+        .step .step-number {
+            width: 80px; height: 80px; border-radius: 50%; background: var(--background-color); border: 3px solid var(--secondary-color);
+            color: var(--secondary-color); display: flex; align-items: center; justify-content: center; font-size: 2.5rem;
+            font-weight: 700; font-family: var(--font-primary); margin: 0 auto 1.5rem; transition: all 0.3s;
+        }
+        .step:hover .step-number { background: var(--secondary-color); color: var(--white-color); transform: scale(1.1); }
+        .step h4 { font-size: 1.3rem; color: var(--primary-color); font-family: var(--font-primary); margin-bottom: 0.5rem; }
+        
+        /* --- Tests Section --- */
+        .tests-container { max-width: 900px; margin: 2rem auto 0; position: relative; }
+        #test-search { width: 100%; padding: 1rem; font-size: 1rem; border-radius: 50px; border: 1px solid #ddd; margin-bottom: 1rem; outline-color: var(--secondary-color); }
+        
+        /* --- ESTILOS ADAPTADOS PARA BCV Y RESULTADOS --- */
+        .bcv-rate {
+            background: var(--light-gray-bg);
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            font-size: 1.1rem;
+            font-family: var(--font-primary);
+        }
         .bcv-rate span { color: var(--primary-color); }
-
-        /* Footer */
-        footer { background: var(--dark-color); color: white; padding: 80px 0 30px; position: relative; overflow: hidden; }
-        footer::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://picsum.photos/seed/footer-pattern/1920/400.jpg') center/cover; opacity: 0.05; z-index: 0; }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 60px; position: relative; z-index: 2; }
-        .footer-column h3 { font-size: 1.3rem; margin-bottom: 24px; position: relative; padding-bottom: 16px; }
-        .footer-column h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--secondary-color); border-radius: 2px; }
-        .footer-column p, .footer-column li { margin-bottom: 16px; color: rgba(255, 255, 255, 0.8); line-height: 1.7; }
-        .footer-column ul { list-style: none; padding: 0; }
-        .footer-column ul li a { color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition); display: inline-block; }
-        .footer-column ul li a:hover { color: white; transform: translateX(5px); }
-        .newsletter-form { display: flex; margin-top: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 50px; overflow: hidden; }
-        .newsletter-form input { flex: 1; padding: 16px 20px; border: none; background: transparent; color: white; }
-        .newsletter-form input::placeholder { color: rgba(255, 255, 255, 0.6); }
-        .newsletter-form button { background: var(--secondary-color); color: white; border: none; padding: 16px 24px; cursor: pointer; transition: var(--transition); font-weight: 600; }
-        .newsletter-form button:hover { background: #00a152; }
-        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.6); position: relative; z-index: 2; }
-
-        /* Form Styles */
-        .form-group { margin-bottom: 24px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); }
-        .form-control { width: 100%; padding: 16px 20px; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 1rem; transition: var(--transition); background: #f8fafc; }
-        .form-control:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); background: white; }
-        .btn-submit { background: var(--gradient-3); color: white; padding: 16px 32px; border: none; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); width: 100%; box-shadow: var(--shadow-md); }
-        .btn-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-
-        /* Modal Styles */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 10000; overflow-y: auto; animation: fadeIn 0.3s ease; }
-        .modal-content { background: white; max-width: 1200px; margin: 50px auto; border-radius: 24px; overflow: hidden; position: relative; animation: slideUp 0.5s ease; box-shadow: var(--shadow-xl); }
-        @keyframes slideUp { from { transform: translateY(100px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        .modal-header { background: var(--gradient-2); color: white; padding: 40px; position: relative; }
-        .modal-close { position: absolute; top: 20px; right: 20px; background: rgba(255, 255, 255, 0.2); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; transition: var(--transition); }
-        .modal-close:hover { background: rgba(255, 255, 255, 0.3); transform: rotate(90deg); }
-        .modal-body { padding: 50px; }
-        .doctor-portal-nav { display: flex; gap: 16px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; flex-wrap: wrap; }
-        .portal-nav-item { padding: 12px 24px; background: #f8fafc; border-radius: 12px; cursor: pointer; transition: var(--transition); font-weight: 600; color: var(--text-light); border: 1px solid transparent; }
-        .portal-nav-item.active { background: var(--gradient-2); color: white; border-color: transparent; }
-        .portal-nav-item:hover:not(.active) { background: white; border-color: var(--primary-color); color: var(--primary-color); }
-        .portal-section { display: none; }
-        .portal-section.active { display: block; animation: fadeIn 0.5s ease; }
-        .doctor-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .doctor-service-card { background: #f8fafc; padding: 30px; border-radius: 16px; transition: var(--transition); border: 1px solid rgba(0, 0, 0, 0.05); }
-        .doctor-service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); background: white; }
-        .doctor-service-card h4 { color: var(--primary-color); margin-bottom: 20px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
-        .doctor-service-card ul { list-style: none; padding-left: 0; }
-        .doctor-service-card li { padding: 10px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.05); display: flex; align-items: center; gap: 10px; color: var(--text-light); }
-        .doctor-service-card li:last-child { border-bottom: none; }
-        .doctor-service-card li i { color: var(--secondary-color); font-size: 0.9rem; }
-        .doctor-login-form { max-width: 500px; margin: 0 auto; }
-
-        /* Animations */
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* Loading Animation */
-        .loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s, visibility 0.5s; }
-        .loader.hidden { opacity: 0; visibility: hidden; }
-        .loader-circle { width: 50px; height: 50px; border: 4px solid #f3f3f3; border-top: 4px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
-        /* Toast Notification */
-        .toast { position: fixed; bottom: 30px; right: 30px; background: white; color: var(--text-color); padding: 20px 30px; border-radius: 12px; box-shadow: var(--shadow-xl); transform: translateX(400px); transition: transform 0.3s ease; z-index: 1002; display: flex; align-items: center; gap: 16px; max-width: 400px; border-left: 4px solid var(--secondary-color); }
-        .toast.show { transform: translateX(0); }
-        .toast.error { border-left-color: var(--accent-color); }
-        .toast-icon { font-size: 1.5rem; color: var(--secondary-color); }
-        .toast.error .toast-icon { color: var(--accent-color); }
+        
+        .search-results-container {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--white-color);
+            border: 1px solid #EAEAEA;
+            border-top: none;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 900;
+            display: none;
+        }
+        .result-item {
+            padding: 15px 25px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .result-item:last-child { border-bottom: none; }
+        .result-item:hover { background-color: var(--light-gray-bg); }
+        .result-item-name { font-weight: 600; color: var(--text-color); font-family: var(--font-secondary); }
+        .result-item-price { text-align: right; }
+        .price-usd { font-weight: 700; color: var(--secondary-color); font-family: var(--font-primary); }
+        .price-bcv { font-size: 0.9rem; color: var(--text-light); display: block; }
+        .no-results { padding: 20px; text-align: center; color: var(--text-light); }
 
 
-        /* Responsive Styles */
+        /* --- ESTILOS ADAPTADOS PARA PORTAL DE RESULTADOS --- */
+        .portal-container {
+            max-width: 600px;
+            margin: 2rem auto 0;
+            background: var(--white-color);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .portal-container h3 {
+            font-family: var(--font-primary);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .portal-container p {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-family: var(--font-primary);
+            color: var(--secondary-color);
+        }
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: var(--font-secondary);
+            outline-color: var(--secondary-color);
+        }
+        .portal-container .cta-button {
+            width: 100%;
+            background: var(--primary-color);
+            color: var(--white-color);
+        }
+        .portal-container .cta-button:hover {
+            background: var(--secondary-color);
+        }
+
+        /* --- Footer --- */
+        footer { background: #2c3e50; color: var(--white-color); padding: 4rem 5% 2rem; }
+        .footer-content { display: flex; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 2rem; }
+        .footer-section { flex: 1; min-width: 250px; }
+        footer h3 { font-family: var(--font-primary); color: var(--primary-color); margin-bottom: 1.5rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem; display: inline-block; }
+        .social-media a { display: inline-block; color: var(--white-color); text-decoration: none; margin-right: 1.5rem; font-size: 28px; transition: color 0.3s, transform 0.3s; }
+        .social-media a:hover { color: var(--primary-color); transform: translateY(-3px); }
+        .footer-bottom { text-align: center; border-top: 1px solid #466380; padding-top: 2rem; font-size: 0.9rem; }
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: 20px;
+        }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        /* Enlace oculto a login */
+        .admin-login-link {
+            display: block;
+            width: 10px;
+            height: 10px;
+            margin: 10px auto 0;
+            opacity: 0;
+        }
+
+
+        /* --- WhatsApp Float Button --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        
+        /* --- Responsive --- */
         @media (max-width: 992px) {
-            .home-service-content, .about-content { grid-template-columns: 1fr; gap: 40px; }
-            .hero-title { font-size: 3.5rem; }
-            .section-title { font-size: 2.5rem; }
-            .features-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+            .hero { flex-direction: column; text-align: center; }
+            .hero-text { max-width: 100%; margin-bottom: 3rem; }
+            .hero-text p { max-width: 100%; }
+            .hours-24h { font-size: 7rem; }
+            .hours-text { font-size: 1.2rem; }
         }
-
         @media (max-width: 768px) {
-            .mobile-menu-toggle { display: block; /* Show hamburger */ }
-            nav {
-                /* Mobile flyout menu styles */
-                position: fixed; top: 0; right: -300px; width: 300px; height: 100vh;
-                background: white; box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                z-index: 1001; transition: all 0.3s ease; padding: 100px 30px 30px;
-                display: block;
-            }
-            nav.active { right: 0; }
-            nav ul { flex-direction: column; gap: 20px; align-items: flex-start; }
-            .close-menu { display: block; /* Show X button */ }
-            .header-buttons { display: none; }
-            .hero-title { font-size: 2.5rem; }
-            .hero-subtitle { font-size: 1.1rem; }
-            .hero-buttons { flex-direction: column; align-items: stretch; }
-            .top-bar-content { flex-direction: column; gap: 15px; }
-            .contact-info { justify-content: center; }
-            .about-stats { grid-template-columns: 1fr; }
-            .section { padding: 60px 0; }
-            .modal-content { width: 95%; margin: 20px auto; }
-            .modal-body { padding: 30px 20px; }
-            .portal-nav-item { padding: 10px 15px; font-size: 0.9rem; }
-        }
-
-        @media (max-width: 576px) {
-            .hero-title { font-size: 2rem; }
-            .section-title { font-size: 2rem; }
-            .home-service-text h2 { font-size: 2rem; }
-            .testimonial-card { min-width: calc(100% - 40px); max-width: calc(100% - 40px); /* Adjust width */ margin: 0; /* Remove margin if calculation accounts for it */ }
-            .testimonials-slider {
-                 /* Adjust width: (card width + gap) * total cards */
-                 /* Card width is 100% - 40px. Let's approximate 100% for calculation */
-                width: calc((100% + 30px) * 16);
-                animation: scrollLeftMobile 80s linear infinite; /* Adjust time if needed */
-                padding-left: 20px; /* Ensure first card starts correctly */
-            }
-            @keyframes scrollLeftMobile {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(calc(-(100% + 30px) * 8)); /* Adjust transform for 8 cards */ }
-            }
-            .portal-body { padding: 30px 20px; }
-            .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .footer-column h3::after { left: 50%; transform: translateX(-50%); }
+            body { font-size: 14px; }
+            h1 { font-size: 2.5rem !important; }
+            .section { padding: 3rem 5%; }
+            nav { flex-direction: column; }
+            nav ul { display: none; }
+            .hero-image { display: none; }
+            .process-steps, .why-us-grid { flex-direction: column; gap: 1rem;}
+            .process-steps::before { display: none; }
+            .test-list { columns: 1; }
+            .footer-content { flex-direction: column; text-align: center; }
+            footer h3 { display: block; }
+            .portal-container { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <div class="loader" id="loader"> <div class="loader-circle"></div> </div>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="logo.png" alt="FlorLab Logo">
+                <span>FlorLab</span>
+            </a>
+            <ul>
+                <li><a href="#why-us">Beneficios</a></li>
+                <li><a href="#process">Proceso</a></li>
+                <li><a href="#tests">Pruebas</a></li>
+                <li class="nav-cta"><a href="#results">Consulta de Resultados</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="top-bar"> <div class="container"> <div class="top-bar-content"> <div class="contact-info"> <span><i class="fas fa-phone"></i> 0243-220.2217 / 0424-3524393</span> <span><i class="fas fa-envelope"></i> info@florlab.com.ve</span> <span><i class="fas fa-map-marker-alt"></i> Maracay, Aragua</span> </div> <div class="social-links"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="https://www.instagram.com/florlab.lc" target="_blank"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-whatsapp"></i></a> </div> </div> </div> </div>
-
-    <header id="header"> <div class="container"> <div class="header-content"> <a href="#home" class="logo"> <div class="logo-icon"> <img src="logo.png" alt="Flor Lab Logo"> </div> <div class="logo-text"> <h1>Flor Lab</h1> <p>Excelencia en Diagnóstico Clínico</p> </div> </a> <nav id="mainNav"> <button class="close-menu" id="closeMenu"> <i class="fas fa-times"></i> </button> <ul> <li><a href="#home">Inicio</a></li> <li><a href="#services">Servicios</a></li> <li><a href="#home-service">Servicio a Domicilio</a></li> <li><a href="#about">Nosotros</a></li> <li><a href="#results">Resultados</a></li> <li><a href="#contact">Contacto</a></li> </ul> </nav> <div class="header-buttons"> <button class="cta-button btn-secondary" id="doctorPortalBtn"> <i class="fas fa-user-md"></i> Portal Médicos </button> <a href="#results" class="cta-button btn-primary"> <i class="fas fa-file-medical"></i> Ver Resultados </a> </div> <button class="mobile-menu-toggle" id="mobileMenuToggle"> <i class="fas fa-bars"></i> </button> D</div> </div> </header>
-
-    <section class="hero" id="home"> <div class="hero-bg"></div> <div class="hero-overlay"></div> <div class="lab-animation" id="labAnimation"></div> <div class="hero-content"> <div class="hero-badge"> <i class="fas fa-award"></i> <span>Líderes en Diagnóstico Clínico</span> </div> <h1 class="hero-title">Precisión y Confianza en tu Diagnóstico</h1> <p class="hero-subtitle">En Flor Lab combinamos tecnología de vanguardia con expertos altamente calificados para brindarte resultados clínicos con la máxima precisión y confiabilidad.</p> <div class="hero-buttons"> <a href="#services" class="btn-hero btn-hero-primary"> <i class="fas fa-microscope"></i> Nuestros Servicios </a> <a href="#home-service" class="btn-hero btn-hero-secondary"> <i class="fas fa-home"></i> Servicio a Domicilio </a> </div> </div> <a href="#features" class="scroll-indicator"> <i class="fas fa-chevron-down"></i> </a> </section>
-
-    <section class="features section" id="features"> <div class="container"> <div class="section-header"> <div class="section-badge"> <i class="fas fa-star"></i> <span>¿Por qué elegir Flor Lab?</span> </div> <h2 class="section-title">Liderazgo en Diagnóstico Clínico</h2> <p class="section-subtitle">Tecnología de última generación y resultados confiables con estándares internacionales de calidad</p> </div> <div class="features-grid"> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-microscope"></i> </div> <h3>Tecnología de Punta</h3> <p>Equipamiento de última generación con sistemas automatizados que garantizan la máxima precisión en cada análisis.</p> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-user-md"></i> </div> <h3>Expertos Calificados</h3> <p>Equipo de profesionales con amplia experiencia y certificaciones internacionales en diagnóstico clínico.</p> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-clock"></i> </div> <h3>Resultados Rápidos</h3> <p>Entrega de resultados en tiempo récord mediante nuestro sistema de procesamiento optimizado y digitalización.</p> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-shield-alt"></i> </div> <h3>Calidad Rigurosa</h3> <p>Procesos de control de calidad certificados bajo estándares internacionales ISO 9001:2015.</p> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-lock"></i> </div> <h3>Confidencialidad</h3> <p>Sistemas de seguridad de última generación para proteger la privacidad de tu información médica.</p> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-award"></i> </div> <h3>Reconocimiento</h3> <p>Acreditaciones y certificaciones que avalan nuestra excelencia en diagnóstico clínico.</p> </div> </div> </div> </section>
-
-    <section class="services section" id="services"> <div class="container"> <div class="section-header"> <div class="section-badge"> <i class="fas fa-vial"></i> <span>Nuestros Servicios</span> </div> <h2 class="section-title">Análisis Clínicos Especializados</h2> <p class="section-subtitle">Amplia gama de análisis clínicos con tecnología de vanguardia para un diagnóstico preciso. Encuentra tu exámen:</p> </div> <div class="search-wrapper"> <div class="bcv-rate"> Tasa BCV del Día: Bs. <span id="bcv-rate-display">Cargando...</span> </div> <input type="text" id="test-search" placeholder="Escribe el exámen que buscas (Ej: Hematologia, Perfil 20, PCR)..." autocomplete="off"> <div id="search-results" class="search-results-container"> </div> </div> </div> </section>
-
-    <section class="home-service section" id="home-service"> <div class="container"> <div class="section-header"> <div class="section-badge"> <i class="fas fa-home"></i> <span>Servicio a Domicilio</span> </div> <h2 class="section-title">Comodidad y Profesionalismo</h2> <p class="section-subtitle">Toma de muestras sin salir de tu hogar con nuestro equipo especializado</p> </div> <div class="home-service-content"> <div class="home-service-text"> <h2>Servicio a Domicilio Premium</h2> <p>Comodidad y profesionalismo en la toma de muestras sin salir de tu hogar. Nuestro equipo especializado se desplaza a tu ubicación con todo el equipamiento necesario.</p> <ul class="home-service-features"> <li><i class="fas fa-check-circle"></i> Toma de muestras a domicilio en todo Maracay</li> <li><i class="fas fa-check-circle"></i> Personal profesional y certificado</li> <li><i class="fas fa-check-circle"></i> Equipamiento estéril y desechable</li> <li><i class="fas fa-check-circle"></i> Horarios flexibles</li> <li><i class="fas fa-check-circle"></i> Resultados digitales</li> </ul> <button class="btn-home-service" id="requestHomeService"> <i class="fas fa-calendar-check"></i> Solicitar Servicio </button> </div> <div class="home-service-img"> <img src="https://picsum.photos/seed/home-service-nurse/600/500.jpg" alt="Servicio a Domicilio"> </div> </div> </div> </section>
-
-    <section class="about section" id="about"> <div class="container"> <div class="section-header"> <div class="section-badge"> <i class="fas fa-info-circle"></i> <span>Sobre Nosotros</span> </div> <h2 class="section-title">Excelencia en Diagnóstico Clínico</h2> <p class="section-subtitle">Más de 15 años de experiencia liderando el sector de diagnóstico en Maracay</p> </div> <div class="about-content"> <div class="about-text"> <h2>Flor Lab: Confianza y Precisión</h2> <p>Con más de 15 años de excelencia, Flor Lab es el laboratorio de referencia en Maracay. Nuestra misión es proporcionar resultados de alta calidad con tecnología de vanguardia.</p> <p>Contamos con profesionales calificados, comprometidos con tu salud. Cada análisis se realiza con máxima precisión y confidencialidad.</p> <div class="about-stats"> <div class="stat-item"> <div class="stat-number" data-target="15">0</div> <div class="stat-label">Años Experiencia</div> </div> <div class="stat-item"> <div class="stat-number" data-target="50000">0</div> <div class="stat-label">Pacientes</div> </div> <div class="stat-item"> <div class="stat-number" data-target="200">0</div> <div class="stat-label">+ Análisis</div> </div> <div class="stat-item"> <div class="stat-number" data-target="24">0</div> <div class="stat-label">Horas Servicio</div> </div> </div> </div> <div class="about-img"> <img src="https://picsum.photos/seed/laboratory-team-advanced/600/500.jpg" alt="Equipo Flor Lab"> </div> </div> </div> </section>
-
-    <section class="testimonials section">
-        <div class="container" style="overflow: hidden;">
-            <div class="section-header">
-                <div class="section-badge"> <i class="fas fa-quote-left"></i> <span>Testimonios</span> </div>
-                <h2 class="section-title">Lo Que Dicen Nuestros Pacientes</h2>
-                <p class="section-subtitle">La confianza de nuestros pacientes es nuestro mayor logro</p>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Tu Bienestar, Nuestra Prioridad. Precisión y Confianza en Cada Resultado.</h1>
+                <p>Descubre una nueva experiencia en análisis clínicos. Con la tecnología más avanzada y un equipo humano dedicado, cuidamos de tu salud.</p>
+                <a href="https://wa.me/584243524393" target="_blank" class="cta-button">Agenda tu Cita por WhatsApp</a>
             </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"Excelente servicio, muy profesionales y los resultados a tiempo. El personal es muy amable."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person1-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>María G.</h4> <p>Paciente</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"El servicio a domicilio es increíble, me facilitó mucho la vida. Muy profesionales."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person2-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Carlos R.</h4> <p>Paciente</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"Llevo años confiando en Flor Lab. La precisión de sus resultados es incomparable."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person3-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Ana M.</h4> <p>Paciente</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"Como médico, confío plenamente en los resultados de Flor Lab. Su tecnología y control de calidad son mi primera opción."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/doctor1-advanced/60/60.jpg" alt="Médico" class="author-img"> <div class="author-info"> <h4>Dr. Luis P.</h4> <p>Médico Internista</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div> <p class="testimonial-text">"Instalaciones impecables y tecnología moderna. Se nota el cuidado en cada detalle. Muy recomendado."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person4-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Elena S.</h4> <p>Paciente</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"La atención telefónica para agendar la cita a domicilio fue excelente, muy claros y amables."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person5-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Javier F.</h4> <p>Paciente</p> </div> </div> </div>
-                 <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"Siempre puntuales y los resultados fáciles de entender a través del portal web."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person6-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Sofia L.</h4> <p>Paciente</p> </div> </div> </div>
-                 <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"El portal para médicos es muy útil para seguir los resultados de mis pacientes. Flor Lab es un aliado."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/doctor2-advanced/60/60.jpg" alt="Médico" class="author-img"> <div class="author-info"> <h4>Dra. Ramirez</h4> <p>Pediatra</p> </div> </div> </div>
+            <div class="hero-image">
+                <div class="hours-24h">24h</div>
+                <div class="hours-text">7 días a la semana</div>
+            </div>
+        </section>
 
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"Excelente servicio, muy profesionales y los resultados a tiempo. El personal es muy amable."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person1-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>María G.</h4> <p>Paciente</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"El servicio a domicilio es increíble, me facilitó mucho la vida. Muy profesionales."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person2-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Carlos R.</h4> <p>Paciente</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"Llevo años confiando en Flor Lab. La precisión de sus resultados es incomparable."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person3-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Ana M.</h4> <p>Paciente</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"Como médico, confío plenamente en los resultados de Flor Lab. Su tecnología y control de calidad son mi primera opción."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/doctor1-advanced/60/60.jpg" alt="Médico" class="author-img"> <div class="author-info"> <h4>Dr. Luis P.</h4> <p>Médico Internista</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div> <p class="testimonial-text">"Instalaciones impecables y tecnología moderna. Se nota el cuidado en cada detalle. Muy recomendado."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person4-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Elena S.</h4> <p>Paciente</p> </div> </div> </div>
-                <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"La atención telefónica para agendar la cita a domicilio fue excelente, muy claros y amables."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person5-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Javier F.</h4> <p>Paciente</p> </div> </div> </div>
-                 <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"Siempre puntuales y los resultados fáciles de entender a través del portal web."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/person6-advanced/60/60.jpg" alt="Cliente" class="author-img"> <div class="author-info"> <h4>Sofia L.</h4> <p>Paciente</p> </div> </div> </div>
-                 <div class="testimonial-card"> <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div> <p class="testimonial-text">"El portal para médicos es muy útil para seguir los resultados de mis pacientes. Flor Lab es un aliado."</p> <div class="testimonial-author"> <img src="https://picsum.photos/seed/doctor2-advanced/60/60.jpg" alt="Médico" class="author-img"> <div class="author-info"> <h4>Dra. Ramirez</h4> <p>Pediatra</p> </div> </div> </div>
+        <section id="why-us" class="section bg-light">
+            <h2 class="section-title">¿Por Qué Elegir FlorLab?</h2>
+            <p class="section-subtitle">Vamos más allá del análisis. Te ofrecemos una experiencia basada en la confianza, la innovación y el cuidado que mereces.</p>
+            <div class="why-us-grid">
+                <div class="feature-card fade-in">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                    <h3>Tecnología de Vanguardia</h3>
+                    <p>Utilizamos equipos de última generación y técnicas como PCR en tiempo real para garantizar la máxima precisión en cada resultado.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></div>
+                    <h3>Resultados Confiables</h3>
+                    <p>Nuestro riguroso control de calidad y equipo de profesionales aseguran que puedas confiar plenamente en la información que te brindamos.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Creemos en el trato humano. Te acompañamos en cada paso del proceso con amabilidad y profesionalismo, resolviendo todas tus dudas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section">
+            <h2 class="section-title">La Experiencia de Nuestros Pacientes</h2>
+            <p class="section-subtitle">La confianza y satisfacción de quienes nos eligen es nuestro mayor orgullo.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="stars">★★★★★</p>
+                    <p>"El proceso fue increíblemente rápido y el personal muy amable. Recibí mis resultados en línea el mismo día. ¡Totalmente recomendados!"</p>
+                    <p class="author">- Ana Pérez</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="stars">★★★★★</p>
+                    <p>"Excelente atención. Me explicaron todo el procedimiento con paciencia y profesionalismo. Se nota que usan tecnología de primera."</p>
+                    <p class="author">- Carlos Rodríguez</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="stars">★★★★★</p>
+                    <p>"Tenía que hacerme unas pruebas especializadas y aquí las encontré. El personal es muy capacitado y las instalaciones impecables."</p>
+                    <p class="author">- Sofía Gómez</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="process" class="section bg-light">
+            <h2 class="section-title">Tu Experiencia en 3 Pasos</h2>
+            <p class="section-subtitle">Hemos simplificado el proceso para que cuidar tu salud sea más fácil y cómodo que nunca.</p>
+            <div class="process-steps">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h4>Agenda tu Visita</h4>
+                    <p>Contáctanos por WhatsApp o visítanos directamente. No necesitas cita para la mayoría de las pruebas.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">2</div>
+                    <h4>Toma de Muestra</h4>
+                    <p>Nuestro personal experto realizará la toma de muestra de forma rápida, segura y con la mínima molestia.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">3</div>
+                    <h4>Recibe tus Resultados</h4>
+                    <p>Accede a tus resultados de forma segura en línea o recógelos en nuestras instalaciones. Te notificaremos en cuanto estén listos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tests" class="section">
+            <h2 class="section-title">Catálogo de Pruebas y Precios</h2>
+            <p class="section-subtitle">Encuentra el análisis que necesitas. Los precios en Bs. se actualizan según la tasa BCV del día.</p>
+            <div class="tests-container">
+                <div class="bcv-rate">Tasa BCV del Día: Bs. <span id="bcv-rate-display">Cargando...</span></div>
+                
+                <input type="text" id="test-search" placeholder="Buscar prueba (ej: Hematología, VPH, Glucosa)...">
+                
+                <div id="search-results" class="search-results-container">
+                    </div>
+            </div>
+        </section>
+        
+        <section id="results" class="section bg-light">
+            <h2 class="section-title">Consulta de Resultados</h2>
+            <p class="section-subtitle">Accede a tus resultados de forma segura y confidencial.</p>
+            <div class="portal-container">
+                <h3>Portal de Pacientes</h3>
+                <p>Ingresa tu número de orden para descargar tus análisis.</p>
+                <form action="download.php" method="POST" class="login-form" target="_blank">
+                    <div class="form-group">
+                        <label for="order-number">Número de Orden</label>
+                        <input type="text" id="order-number" name="order_number" class="form-control" placeholder="Ej: 222456" required>
+                    </div>
+                    <button type="submit" class="cta-button">Descargar Resultados</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📍 Dirección: Centro Profesional "La Floresta", Calle Comercio Nº 1, Piso N° 3 - Local 3-09, Maracay Edo. Aragua.</p>
+                <p>📞 Teléfono (24 horas): 0243-2202217</p>
+                <p>📲 WhatsApp (7:00am - 6:00pm): 0424-3524393</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1565.485125916053!2d-67.5878374!3d10.2681506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e803b9c11df2391%3A0x3c968100beaf7af5!2sLaboratorio+Cl%C3%ADnico+FlorLab!5e0!3m2!1ses!2sve!4v1719889234857!5m2!1ses!2sve" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+             <div class="footer-section">
+                <h3>Horarios</h3>
+                <p>Lunes a Sábado: 7:00am - 6:00pm</p>
+                <p>Servicio de Emergencia 24h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/profile.php?id=61578221825313" target="_blank" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="https://www.instagram.com/florlab.lc/?hl=es" target="_blank" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                </div>
             </div>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <p>© 2025 FlorLab. Todos los derechos reservados.</p>
+            <a href="login_page.php" class="admin-login-link" aria-label="Admin Login"></a>
+        </div>
+    </footer>
 
-    <section class="results-portal section" id="results"> <div class="container"> <div class="section-header"> <div class="section-badge"> <i class="fas fa-file-medical"></i> <span>Portal de Resultados</span> </div> <h2 class="section-title">Acceso a Tus Resultados</h2> <p class="section-subtitle">Consulta tus resultados de forma segura y confidencial</p> </div> <div class="portal-container"> <div class="portal-header"> <h3>Portal de Pacientes</h3> <p>Ingresa tu número de orden para descargar tus análisis</p> </div> <div class="portal-body"> <form action="download.php" method="POST" class="login-form" target="_blank"> <div class="form-group"> <label for="order-number">Número de Orden</label> <input type="text" id="order-number" name="order_number" class="form-control" placeholder="Ej: 222456" required> </div> <button type="submit" class="btn-submit">Descargar Resultados</button> </form> <div style="margin-top: 40px; padding: 25px; background-color: #f8fafc; border-radius: 16px; border-left: 4px solid var(--primary-color);"> <h4 style="margin-bottom: 15px; color: var(--primary-color);">¿Problemas para descargar?</h4> <p>Asegúrate de ingresar el número de orden tal como aparece en tu comprobante. Si continúas teniendo problemas, contáctanos al 0243-220.2217 o por WhatsApp.</p> </div> </div> </div> </div> </section>
-
-    <footer id="contact"> <div class="container"> <div class="footer-content"> <div class="footer-column"> <h3>Flor Lab</h3> <p>Laboratorio clínico de excelencia en Maracay. C.C La Floresta, P3, L 3-09.</p> <div class="social-links" style="margin-top: 25px;"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="https://www.instagram.com/florlab.lc" target="_blank"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-whatsapp"></i></a> </div> </div> <div class="footer-column"> <h3>Enlaces</h3> <ul> <li><a href="#home">Inicio</a></li> <li><a href="#services">Servicios</a></li> <li><a href="#home-service">Domicilio</a></li> <li><a href="#about">Nosotros</a></li> <li><a href="#results">Resultados</a></li> </ul> </div> <div class="footer-column"> <h3>Servicios</h3> <ul> <li><a href="#services">Análisis Sangre</a></li> <li><a href="#services">Hormonales</a></li> <li><a href="#services">PCR</a></li> <li><a href="#services">Alergias</a></li> <li><a href="#services">Neonatal</a></li> </ul> </div> <div class="footer-column"> <h3>Contacto</h3> <ul> <li><i class="fas fa-map-marker-alt"></i> C.C La Floresta, P3, L 3-09. Maracay.</li> <li><i class="fas fa-phone"></i> 0243-220.2217 / 0424-3524393</li> <li><i class="fas fa-envelope"></i> info@florlab.com.ve</li> <li><i class="fas fa-clock"></i> Lun-Vie: 6am-6pm | Sáb: 7am-1pm</li> </ul> </div> </div> <div class="footer-bottom"> <p>&copy; 2025 Flor Lab. Todos los derechos reservados.</p> <a href="login_page.php" style="display:block; width: 10px; height: 5px; margin: 5px auto; background: #555; opacity: 0.05;" aria-label="Admin Login"></a> </div> </div> </footer>
-
-    <div class="modal" id="doctorPortalModal"> <div class="modal-content"> <div class="modal-header"> <h2>Portal Profesionales</h2> <p>Acceso exclusivo para médicos</p> <button class="modal-close" id="closeDoctorPortal"> <i class="fas fa-times"></i> </button> </div> <div class="modal-body"> <div class="doctor-portal-nav"> <div class="portal-nav-item active" data-section="services-doc">Servicios</div> <div class="portal-nav-item" data-section="technology">Tecnología</div> <div class="portal-nav-item" data-section="quality">Calidad</div> <div class="portal-nav-item" data-section="login-doc">Acceso</div> </div> <div class="portal-section active" id="services-doc"> <h3 style="margin-bottom: 25px; color: var(--primary-color);">Servicios Especializados</h3> <div class="doctor-services"> <div class="doctor-service-card"><h4><i class="fas fa-vial"></i> Análisis</h4><ul><li><i class="fas fa-check"></i> Hematología</li><li><i class="fas fa-check"></i> Bioquímica</li><li><i class="fas fa-check"></i> Marcadores</li></ul></div> <div class="doctor-service-card"><h4><i class="fas fa-dna"></i> Genética</h4><ul><li><i class="fas fa-check"></i> Secuenciación</li><li><i class="fas fa-check"></i> PCR</li><li><i class="fas fa-check"></i> Farmacogenómica</li></ul></div> <div class="doctor-service-card"><h4><i class="fas fa-microscope"></i> Patología</h4><ul><li><i class="fas fa-check"></i> Biopsias</li><li><i class="fas fa-check"></i> IHQ</li><li><i class="fas fa-check"></i> Citologías</li></ul></div> <div class="doctor-service-card"><h4><i class="fas fa-virus"></i> Microbiología</h4><ul><li><i class="fas fa-check"></i> Cultivos</li><li><i class="fas fa-check"></i> Identificación</li><li><i class="fas fa-check"></i> Sensibilidad</li></ul></div> </div> </div> <div class="portal-section" id="technology"> <h3 style="margin-bottom: 25px; color: var(--primary-color);">Nuestra Tecnología</h3> <p>Equipos Roche, Siemens, Abbott garantizan precisión...</p> </div> <div class="portal-section" id="quality"> <h3 style="margin-bottom: 25px; color: var(--primary-color);">Control de Calidad</h3> <p>Certificados ISO 9001:2015, participamos en control externo...</p> </div> <div class="portal-section" id="login-doc"> <h3 style="margin-bottom: 25px; color: var(--primary-color);">Acceso Profesionales</h3> <div style="max-width: 500px; margin: 0 auto;"> <form class="doctor-login-form" id="doctorLoginForm"> <div class="form-group"> <label for="doctor-id">Código Profesional</label> <input type="text" id="doctor-id" class="form-control" required> </div> <div class="form-group"> <label for="doctor-password">Contraseña</label> <input type="password" id="doctor-password" class="form-control" required> </div> <button type="submit" class="btn-submit">Iniciar Sesión</button> </form> <div style="margin-top: 30px; text-align: center;"> <p>¿Aún no tienes acceso?</p> <a href="#" class="btn-submit" style="display: inline-block; width: auto; padding: 12px 25px;">Solicitar Acceso</a> </div> </div> </div> </div> </div> </div>
-
-    <div class="toast" id="toast"> <div class="toast-icon"> <i class="fas fa-check-circle"></i> </div> <div class="toast-message"></div> </div>
+    <a href="https://wa.me/584243524393" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.45L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.289.173-1.413z"/></svg>
+    </a>
 
     <script src="script.js"></script>
-
 </body>
 </html>
