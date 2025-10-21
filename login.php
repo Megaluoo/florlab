@@ -26,12 +26,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         
     } else {
         // Autenticación fallida
-        header('Location: login.html?error=1');
+        header('Location: login_page.php?error=1');
         exit;
     }
 } else {
     // Si alguien trata de acceder al script directamente
-    header('Location: login.html');
+    header('Location: login_page.php');
     exit;
 }
 ?>
