@@ -1,7 +1,3 @@
-<?php
-require_once 'includes/db.php';
-$tests_catalog = $pdo->query("SELECT * FROM tests_catalog ORDER BY category, name")->fetchAll();
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
